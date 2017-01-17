@@ -8,30 +8,40 @@ Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
 -->
 
-<link rel="import" href="../bower_components/polymer/polymer.html">
-<link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout.html">
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/iron-flex-layout/iron-flex-layout-classes.html">
 
 <!--custome iganbold elements-->
-<link rel="import" href="iganbold-card-container/iganbold-card-container.html">
+<link rel="import" href="../iganbold-card/iganbold-card.html">
 
-<dom-module id="my-view1">
+<dom-module id="iganbold-card-container">
   <template>
-    <style>
+    <style include="iron-flex iron-flex-alignment">
       :host {
         display: block;
-
-        padding: 10px;
       }
 
+      iganbold-card {
+        padding: 10px;
+      }
     </style>
 
-    <iganbold-card-container></iganbold-card-container>
-
+    <div class="layout horizontal center-justified wrap">
+      <template is="dom-repeat" items="[[projects]]">
+        <iganbold-card></iganbold-card>
+      </template>
+    </div>
   </template>
 
   <script>
     Polymer({
-      is: 'my-view1',
+      is: 'iganbold-card-container',
+      properties: {
+          projects: {
+              type: Array,
+              value: [1,2,3,4,5,6]
+          }
+      },
     });
   </script>
 </dom-module>

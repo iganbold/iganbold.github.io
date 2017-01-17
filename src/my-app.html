@@ -26,7 +26,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <template>
     <style>
       :host {
-        --app-primary-color: #4285f4;
+        --app-primary-color: #353535;
         --app-secondary-color: black;
 
         display: block;
@@ -65,7 +65,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         data="{{routeData}}"
         tail="{{subroute}}"></app-route>
 
-    <app-drawer-layout fullbleed>
+    <app-drawer-layout fullbleed force-narrow>
       <!-- Drawer content -->
       <app-drawer id="drawer">
         <app-toolbar>Menu</app-toolbar>
@@ -82,7 +82,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         <app-header condenses reveals effects="waterfall">
           <app-toolbar>
             <paper-icon-button icon="my-icons:menu" drawer-toggle></paper-icon-button>
-            <div main-title>My App</div>
+            <div main-title>Passion Projects</div>
           </app-toolbar>
         </app-header>
 

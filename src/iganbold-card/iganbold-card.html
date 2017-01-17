@@ -1,0 +1,66 @@
+<!--
+@license
+Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/paper-card/paper-card.html">
+<link rel="import" href="../../bower_components/paper-button/paper-button.html">
+
+<dom-module id="iganbold-card">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+
+      paper-card {
+        max-width: 300px;
+      }
+
+      iron-icon {
+        padding-right: 5px;
+      }
+
+      .project-light {
+        color: var(--paper-grey-600);
+      }
+
+      a {
+        text-decoration:none;
+        color: #333333;
+      }
+
+      h2 {
+        color: #333333;
+      }
+
+    </style>
+
+    <div class="">
+      <a href="https://github.com/iganbold/hacknc-fall-2016" target="_blank">
+        <paper-card image="http://placehold.it/150X100/E8117F/000000">
+
+          <div class="card-content">
+            <h2>Friend Finder</h2>
+            <p class="project-light">
+              Emmentaler or Emmental is a yellow, medium-hard cheese Emmentaler or Emmental is a yellow,um-hard cheese
+            </p>
+          </div>
+        </paper-card>
+      </a>
+    </div>
+
+  </template>
+
+  <script>
+    Polymer({
+      is: 'iganbold-card',
+    });
+  </script>
+</dom-module>
