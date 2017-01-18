@@ -41,15 +41,34 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         color: #333333;
       }
 
+      .logo {
+        position: absolute;
+        left: 0;
+        top: 42%;
+        width: 100%
+      }
+
+      .logo img {
+        border-radius: 5px;
+      }
+
+      .center {
+        text-align: center;
+      }
+
     </style>
 
-    <div class="">
+    <div>
       <a href="[[project.github]]" target="_blank">
-        <paper-card image="[[project.coverimg]]">
-
-          <div class="card-content">
-            <h2>[[project.name]]</h2>
-            <p class="project-light">
+        <paper-card image="[[project.coverimg]]" elevation="3">
+          <div class="logo center">
+            <img src="[[project.logo]]">
+          </div>
+          <div class="card-content center">
+            <h3>
+              [[project.name]]
+            </h3>
+            <p class="project-light center">
               [[project.desc]]
             </p>
           </div>
