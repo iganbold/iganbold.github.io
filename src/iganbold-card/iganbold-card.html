@@ -44,13 +44,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     </style>
 
     <div class="">
-      <a href="https://github.com/iganbold/hacknc-fall-2016" target="_blank">
-        <paper-card image="http://placehold.it/150X100/E8117F/000000">
+      <a href="[[project.github]]" target="_blank">
+        <paper-card image="[[project.coverimg]]">
 
           <div class="card-content">
-            <h2>Friend Finder</h2>
+            <h2>[[project.name]]</h2>
             <p class="project-light">
-              Emmentaler or Emmental is a yellow, medium-hard cheese Emmentaler or Emmental is a yellow,um-hard cheese
+              [[project.desc]]
             </p>
           </div>
         </paper-card>
@@ -62,6 +62,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <script>
     Polymer({
       is: 'iganbold-card',
+      properties: {
+          project: Object
+      }
     });
   </script>
 </dom-module>

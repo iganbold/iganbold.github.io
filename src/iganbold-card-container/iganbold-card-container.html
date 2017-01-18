@@ -28,7 +28,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
     <div class="layout horizontal center-justified wrap">
       <template is="dom-repeat" items="[[projects]]">
-        <iganbold-card></iganbold-card>
+        <iganbold-card project="[[item]]"></iganbold-card>
       </template>
     </div>
   </template>
@@ -37,11 +37,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     Polymer({
       is: 'iganbold-card-container',
       properties: {
-          projects: {
-              type: Array,
-              value: [1,2,3,4,5,6]
-          }
-      },
+          projects: Array
+      }
     });
   </script>
 </dom-module>
