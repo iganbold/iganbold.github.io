@@ -1,0 +1,33 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/polymerfire/firebase-app.html">
+<link rel="import" href="../../bower_components/polymerfire/firebase-query.html">
+
+
+<dom-module id="iganbold-data">
+  <template>
+      <firebase-app name="iganboldgithubio"
+                    auth-domain="iganbold-github-io.firebaseapp.com"
+                    database-url="https://iganbold-github-io.firebaseio.com"
+                    api-key="AIzaSyABBlYAZvqeJaSr8T_UbkkmYhvTZeb4w9M">
+      </firebase-app>
+
+      <firebase-query
+              id="query"
+              app-name="iganboldgithubio"
+              path="/projects"
+              data="{{projects}}">
+      </firebase-query>
+  </template>
+
+  <script>
+    Polymer({
+      is: 'iganbold-data',
+      properties: {
+          projects: {
+              type: Object,
+              notify: true
+          }
+      }
+    });
+  </script>
+</dom-module>

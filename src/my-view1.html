@@ -25,13 +25,16 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
     </style>
 
-    <iganbold-card-container></iganbold-card-container>
+    <iganbold-card-container projects="[[projects]]"></iganbold-card-container>
 
   </template>
 
   <script>
     Polymer({
       is: 'my-view1',
+      properties: {
+          projects: Array
+      }
     });
   </script>
 </dom-module>
