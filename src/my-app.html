@@ -29,7 +29,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <template>
     <style>
       :host {
-        --app-primary-color: #353535;
+        --app-primary-color: rgba(221, 221, 221, 0.91);
         --app-secondary-color: black;
 
         display: block;
@@ -59,6 +59,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         color: black;
         font-weight: bold;
       }
+
+      .black {
+        color: #333030;
+      }
+
     </style>
 
     <app-location route="{{route}}"></app-location>
@@ -66,7 +71,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         route="{{route}}"
         pattern="/:page"
         data="{{routeData}}"
-        tail="{{subroute}}"></app-route>
+        tail="{{subroute}}">
+    </app-route>
 
     <!--app data-->
     <iganbold-data projects="{{projects}}"></iganbold-data>
@@ -86,7 +92,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       <app-header-layout has-scrolling-region>
 
         <app-header condenses reveals effects="waterfall">
-          <app-toolbar>
+          <app-toolbar class="tall black">
             <paper-icon-button icon="my-icons:menu" drawer-toggle></paper-icon-button>
             <div main-title>Passion Projects</div>
           </app-toolbar>
